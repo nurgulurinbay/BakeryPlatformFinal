@@ -329,7 +329,7 @@ if (bellBtn) {
   });
 }
 
-// ===== Arrow keys: navbar links, carousel (Home), thumbnails (Gallery) =====
+// ===== Arrow keys: navbar links and carousel (Gallery) =====
 document.addEventListener("keydown", e => {
   if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
   if (/INPUT|TEXTAREA|SELECT/.test(e.target.tagName)) return;
@@ -341,9 +341,6 @@ document.addEventListener("keydown", e => {
   if (carousel) {
     const c = bootstrap.Carousel.getOrCreateInstance(carousel);
     dir > 0 ? c.next() : c.prev();
-  } else if (thumbs.length) {
-    const now = thumbs.findIndex(t => t.classList.contains("active"));
-    selectThumb(thumbs[(now + dir + thumbs.length) % thumbs.length]);
   }
 });
 
