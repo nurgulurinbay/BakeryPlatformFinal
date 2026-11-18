@@ -95,13 +95,6 @@ h1, h2, h3 {
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
 }
 
-.gallery-img {
-  transition: transform 0.3s;
-}
-
-.gallery-img:hover {
-  transform: scale(1.04);
-}
 
 .card-img-top {
   height: 180px;
@@ -303,4 +296,18 @@ main {
   padding: 1rem 0;
   font-size: .95rem;
   color: var(--text, #3b2417);
+}
+.suggest {
+  position: absolute;
+  z-index: 50;
+  left: .75rem;
+  right: .75rem;
+}
+.suggest .list-group-item,
+aside .list-group-item {
+  background: var(--card);
+  color: var(--text);
+}
+aside .list-group-item {
+  background: transparent;
 }
