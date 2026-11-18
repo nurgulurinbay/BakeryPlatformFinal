@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Page created by URINBAY NURGUL -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sweet Crumb Bakery | Order</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="scroll-bar"></div>
+<nav class="navbar navbar-expand-lg navbar-dark bakery-navbar">
+<div class="container">
+<a class="navbar-brand logo" href="index.html">Sweet Crumb Bakery</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+<div class="collapse navbar-collapse" id="mainNavbar">
+<ul class="navbar-nav ms-auto align-items-lg-center"><li class="nav-item"><a data-t class="nav-link" href="index.html">Home</a></li><li class="nav-item"><a data-t class="nav-link" href="menu.html">Menu</a></li><li class="nav-item"><a data-t class="nav-link" href="about.html">About</a></li><li class="nav-item"><a data-t class="nav-link" href="gallery.html">Gallery</a></li><li class="nav-item"><a data-t class="nav-link active" href="order.html">Order</a></li><li class="nav-item"><a data-t class="nav-link" href="contact.html">Contact</a></li><li class="nav-item"><a data-t class="nav-link" href="auth.html">Account</a></li>
+<li class="nav-item ms-lg-2"><select id="lang-select" class="form-select form-select-sm d-inline-block w-auto me-2" aria-label="Language"><option value="en">EN</option><option value="ru">RU</option><option value="kk">KK</option></select><button type="button" id="theme-toggle" class="btn btn-outline-light btn-sm">🌙 Night</button></li>
+</ul></div></div></nav>
+<main class="container py-5"><nav aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="index.html">Home</a></li><li class="breadcrumb-item active" aria-current="page">Order</li></ol></nav>
+<div class="row g-4">
+
+  <aside class="col-lg-4 order-2 order-lg-1">
+
+    <div class="card p-3">
+      <h2 class="h5">Order Info</h2>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Open daily 07:00–20:00</li>
+        <li class="list-group-item">Cakes: order 2 days ahead</li>
+        <li class="list-group-item">Pickup in Astana</li>
+      </ul>
+    </div>
+  </aside>
+
+  <div class="col-lg-8 order-1 order-lg-2">
+    <h1 class="mb-4">Order Request</h1>
+    <form id="order-form" novalidate><div id="step-1"><p class="fw-bold">Step 1 of 2: Your details</p><div class="mb-3"><label class="form-label" for="order-name">Full name</label><input class="form-control" id="order-name" name="order-name" type="text" data-rule="required"><div class="error" aria-live="polite"></div></div><div class="mb-3"><label class="form-label" for="order-email">Email</label><input class="form-control" id="order-email" name="order-email" type="text" data-rule="required email"><div class="error" aria-live="polite"></div></div><div class="mb-3"><label class="form-label" for="order-phone">Phone</label><input class="form-control" id="order-phone" name="order-phone" type="text" data-rule="required phone"><div class="error" aria-live="polite"></div></div><button type="button" id="next-step" class="btn btn-primary">Next</button></div><div id="step-2" hidden><p class="fw-bold">Step 2 of 2: Your order</p><div class="mb-3"><label class="form-label" for="order-item">Product</label><select class="form-select" id="order-item" data-rule="required"><option value="">Choose a product</option><option>Bread</option><option>Croissants</option><option>Birthday cake</option><option>Seasonal dessert</option></select><div class="error" aria-live="polite"></div></div><div class="mb-3"><label class="form-label" for="order-note">Details (date, quantity)</label><textarea class="form-control" id="order-note" rows="4" data-rule="required"></textarea><div class="error" aria-live="polite"></div></div><button type="button" id="prev-step" class="btn btn-outline-secondary">Back</button> <button type="submit" class="btn btn-primary">Send Order</button> <button type="reset" class="btn btn-outline-secondary">Reset</button></div>
+
+  </div>
+
+</div>
+<p class="success mt-3" id="order-success" hidden>Thank you! Your order request was saved.</p></form>
+</main>
+<footer><div class="container text-center py-4">
+<p><strong>Sweet Crumb Bakery Team</strong></p>
+<p>NURLANKYZY ZHANSHUAK | SRAZHDIN YASMIN | URINBAY NURGUL</p>
+<p>Front-End Development — Final Project</p></div></footer>
+<button type="button" id="to-top" aria-label="Back to top">↑</button><div id="toast-box" class="toast-container position-fixed bottom-0 start-0 p-3"></div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
