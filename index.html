@@ -33,9 +33,14 @@
 </div><section class="my-5 text-center"><h2 data-t class="mb-4">Interactive Features</h2>
 <h3 id="time-greeting">Welcome to Sweet Crumb Bakery</h3>
 <form id="greeting-form" class="mx-auto my-4" style="max-width:420px" novalidate>
-<label class="form-label fw-bold" for="user-name">Enter your name for a personal greeting:</label>
-<div class="input-group"><input type="text" id="user-name" class="form-control" placeholder="Your name" data-rule="required"><button type="submit" class="btn btn-primary">Greet Me</button></div>
-<div class="error" aria-live="polite"></div><p id="personal-greeting" class="fw-bold"></p></form>
+  <label class="form-label fw-bold" for="user-name">Enter your name for a personal greeting:</label>
+  <div class="input-group">
+    <input type="text" id="user-name" name="user-name" class="form-control" placeholder="Your name" data-rule="required">
+    <button type="submit" class="btn btn-primary">Greet Me</button>
+  </div>
+  <div class="error" aria-live="polite"></div>
+  <p id="personal-greeting" class="fw-bold mt-2"></p>
+</form>
 <h3>Rate Our Bakery</h3>
 <div class="rating-stars" role="radiogroup" aria-label="Bakery rating"><button type="button" class="star" data-value="1" aria-label="1 star">★</button><button type="button" class="star" data-value="2" aria-label="2 stars">★</button><button type="button" class="star" data-value="3" aria-label="3 stars">★</button><button type="button" class="star" data-value="4" aria-label="4 stars">★</button><button type="button" class="star" data-value="5" aria-label="5 stars">★</button></div>
 <p id="rating-value">Click a star to rate us</p>

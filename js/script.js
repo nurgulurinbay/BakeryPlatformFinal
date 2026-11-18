@@ -190,14 +190,20 @@ if (document.getElementById("time-greeting")) {
   document.getElementById("time-greeting").textContent = hello + "! Welcome to Sweet Crumb Bakery";
 
   // Personal greeting (name saved in localStorage)
-  const greetOut = document.getElementById("personal-greeting");
-  const savedName = localStorage.getItem("visitorName");
-  if (savedName) greetOut.textContent = "Welcome back, " + savedName + "!";
-  handleForm("greeting-form", form => {
-    const name = form["user-name"].value.trim();
-    localStorage.setItem("visitorName", name);
-    greetOut.textContent = "Hello, " + name + "! Enjoy your visit.";
-  });
+const greetOut = document.getElementById("personal-greeting");
+const savedName = localStorage.getItem("visitorName");
+if (savedName && greetOut) {
+  greetOut.textContent = "Welcome back, " + savedName + "!";
+}
+
+handleForm("greeting-form", form => {
+  const input = document.getElementById("user-name");
+  const name = input.value.trim();
+  if (!name) return; 
+  localStorage.setItem("visitorName", name);
+  if (greetOut) greetOut.textContent = "Hello, " + name + "! Enjoy your visit.";
+});
+
 
   // Star rating (saved in localStorage)
   const stars = document.querySelectorAll(".star");
