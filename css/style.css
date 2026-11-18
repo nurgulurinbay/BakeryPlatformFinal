@@ -296,3 +296,11 @@ footer p {
 main {
   flex: 1;
 }
+
+.page-credit {
+  background: var(--section, #fbe9dc);
+  border-top: 3px solid var(--accent, #b5651d);
+  padding: 1rem 0;
+  font-size: .95rem;
+  color: var(--text, #3b2417);
+}
